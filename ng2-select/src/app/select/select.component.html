@@ -1,0 +1,5 @@
+<div>
+  <select [ngModel]="type" (ngModelChange)="onChange($event)"> 
+    <option *ngFor="let obj of options" [hidden]="show(obj)" [value]="obj">{{obj}}</option>
+</select>
+</div>
