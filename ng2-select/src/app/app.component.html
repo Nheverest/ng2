@@ -1,10 +1,16 @@
 <h1>
   {{title}}
 </h1>
-  Selector 1
+  <h2>Selector 1</h2>
   <app-select type="UPPER"></app-select>
 
-  Selector 2
+  <h2>Selector 2</h2>
   <app-select type="LOWER"></app-select>
 
-{{usedOptions}}
+Used options: {{usedOptions}}
+
+<br/><br/><br/><br/>
+
+<input #seconds type="number" placeholder="Enter duration as seconds" (keyup)="0" />
+<br/>
+{{ seconds.value | duration }}

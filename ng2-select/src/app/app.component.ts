@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SelectService} from './select-service';
+import { DurationPipe } from './duration.pipe';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,10 @@ import { SelectService} from './select-service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
-
   constructor(protected selectService:SelectService)  {}
 
   usedOptions:string[] = this.selectService.usedOptions;
+
+  title = 'app works!';
+  seconds:number = 0;
 }
