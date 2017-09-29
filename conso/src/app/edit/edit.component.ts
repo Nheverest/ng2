@@ -13,6 +13,11 @@ import { Consommation } from '../shared/consommation';
 })
 export class EditComponent implements OnInit {
 
+  _counter = this.service.counter;
+
+  get counter() {
+    return this._counter;
+  }
   conso: Consommation;
   sub: Subscription;
   constructor(private route: ActivatedRoute,
@@ -45,5 +50,9 @@ export class EditComponent implements OnInit {
     onDelete() {
       this.service.deleteItem(this.conso);
       this.router.navigate(['/list']);
+    }
+
+    onAdd() {
+      this.service.counter++;
     }
   }

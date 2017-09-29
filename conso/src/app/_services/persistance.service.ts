@@ -8,6 +8,8 @@ export class PersistanceService {
   CONSO = 'CONSO';
   constructor() { }
 
+  counter = 0;
+
 
   loadData(): Consommation[] {
     let result = JSON.parse(localStorage.getItem(this.CONSO));

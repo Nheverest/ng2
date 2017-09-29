@@ -12,7 +12,6 @@ export class AppComponent {
   title = 'app';
 
   constructor(public auth: AuthService, private router:Router) {
-    auth.handleAuthentication();
   }
 
   goHome():void {

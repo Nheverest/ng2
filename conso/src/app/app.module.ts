@@ -5,20 +5,16 @@ import { FormsModule }   from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AuthService } from './auth/auth.service';
+import { PersistanceService } from './_services/persistance.service';
+
+import { AuthGuard } from './_guards/auth.guard';
+
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
-
-import { PersistanceService } from './_services/persistance.service';
 import { CallBackComponent } from './call-back/call-back.component';
 
-const appRoutes: Routes = [
- 
-  { path: 'list', component: ListComponent },
-  { path: 'edit', component: EditComponent },
-  { path: 'callback', component: CallBackComponent },
-  { path: '**', redirectTo: '/', pathMatch: 'full' },
-];
+import { appRoutes } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -29,17 +25,14 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    FormsModule
-  ,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only
     )
   ],
-  providers: [PersistanceService, AuthService],
+  providers: [PersistanceService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 
 export class AppModule { }
-
-
