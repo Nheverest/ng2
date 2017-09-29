@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { BehaviorSubject, Observable  } from 'rxjs'; 
+
 import { Consommation } from '../shared/consommation';
 
 @Injectable()
@@ -8,7 +10,13 @@ export class PersistanceService {
   CONSO = 'CONSO';
   constructor() { }
 
-  counter = 0;
+  private _counterSubject = new BehaviorSubject<number>(0);
+
+  counter = this._counterSubject.asObservable();
+
+  setCounter(newVal: number): void {
+    this._counterSubject.next(newVal);
+  }
 
 
   loadData(): Consommation[] {
