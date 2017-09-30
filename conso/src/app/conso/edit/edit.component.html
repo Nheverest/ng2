@@ -1,5 +1,5 @@
 <h2>
-  Mettez votre consommation à jour ici.
+  {{ "conso.edit.title" | translate }}
 </h2>
 <form name="conso" #consoForm="ngForm">
   <input type="date" class="form-control" 
@@ -17,9 +17,7 @@
   />
 </form>
 <br/>
-<button (click)="onSubmit()">Enregistrer</button>
-<button (click)="onDelete()">Supprimer</button>
-<button (click)="onCancel()">Annuler</button>
+<button (click)="onSubmit()">{{ "conso.list.button.save" | translate }}</button>
+<button (click)="onDelete()">{{ "conso.list.button.delete" | translate }}</button>
+<button (click)="onCancel()">{{ "conso.list.button.cancel" | translate }}</button>
 <br/>
-<button (click)="onAdd()">Increment</button> {{ counter }}
-

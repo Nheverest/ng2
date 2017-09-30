@@ -1,4 +1,5 @@
 export class Consommation {
+    id: number;
     date:Date;
     distance: number;
     volume: number;
@@ -12,3 +13,7 @@ export class Consommation {
     }
 }
 
+export class DB_model {
+    maxId: number;
+    items: Consommation[];
+}

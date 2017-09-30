@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let conso of list" (click)="onEdit(conso.date)">
+    <tr *ngFor="let conso of list" (click)="onEdit(conso.id)">
       <td>{{ conso.date | date }}</td>
       <td>{{ conso.distance }}</td>
       <td>{{ conso.volume }}</td>

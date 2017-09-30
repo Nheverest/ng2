@@ -10,5 +10,11 @@
     "conso.list.header.distance": "Distance",
     "conso.list.header.volume": "Volume",
     "conso.list.header.consumption": "Consommation",
-    "conso.list.title": "Liste des consommations"
+    "conso.list.title": "Liste des consommations",
+
+    "conso.edit.title": "Entrez votre consommation ici",
+    "conso.list.button.save": "Enregistrer",
+    "conso.list.button.delete": "Supprimer",
+    "conso.list.button.cancel" :"Annuler"
+
 }

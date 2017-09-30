@@ -10,5 +10,11 @@
     "conso.list.header.distance": "Distance",
     "conso.list.header.volume": "Volume",
     "conso.list.header.consumption": "Consumption",
-    "conso.list.title": "Consumption List"
+    "conso.list.title": "Consumption List",
+
+    "conso.edit.title": "Please enter your data",
+    "conso.list.button.save": "Save",
+    "conso.list.button.delete": "Delete",
+    "conso.list.button.cancel" :"Cancel"
+
 }

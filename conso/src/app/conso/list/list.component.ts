@@ -37,10 +37,10 @@ export class ListComponent implements OnInit {
     }
   }
 
-  onEdit(date: number) {
+  onEdit(id: number) {
     this.router.navigate(
       ['edit'], 
-      { queryParams: { date: date },
+      { queryParams: { id: id },
         relativeTo: this.route.parent });
   }
 
