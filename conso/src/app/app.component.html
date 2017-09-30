@@ -6,23 +6,28 @@
       <button
         class="btn btn-primary btn-margin"
         routerLink="/">
-          Home
+          {{ "home.button.home" | translate }}
       </button>
 
       <button
         class="btn btn-primary btn-margin"
         *ngIf="!auth.isAuthenticated()"
         (click)="auth.login()">
-          Log In
+        {{ "home.button.login" | translate }}
       </button>
 
       <button
         class="btn btn-primary btn-margin"
         *ngIf="auth.isAuthenticated()"
         (click)="auth.logout()">
-          Log Out
+        {{ "home.button.logout" | translate }}
       </button>
 
+      <select [ngModel]="locale" (ngModelChange)="onLocaleChange($event)" class="selectpicker">
+        <option value="fr_FR">{{ "home.select.option.fr_FR" | translate }}</option>
+        <option value="en_GB">{{ "home.select.option.en_GB" | translate }}</option>
+      </select>
+      <br/>
     <router-outlet></router-outlet>
   </div>
   </div>

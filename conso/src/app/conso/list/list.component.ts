@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { DatePipe } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
 
 import { PersistanceService } from '../services/persistance.service';
 import { Consommation } from '../shared/consommation';

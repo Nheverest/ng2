@@ -1,0 +1,14 @@
+{
+    "home.button.logout": "Logout",
+    "home.button.login": "Login",
+    "home.button.home": "Home",
+    "home.select.option.fr_FR": "French",
+    "home.select.option.en_GB": "English",
+
+    "conso.list.button.new": "New", 
+    "conso.list.header.date": "Date",
+    "conso.list.header.distance": "Distance",
+    "conso.list.header.volume": "Volume",
+    "conso.list.header.consumption": "Consumption",
+    "conso.list.title": "Consumption List"
+}

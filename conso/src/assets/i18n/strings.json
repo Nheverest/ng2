@@ -1,0 +1,22 @@
+{
+	"conso": {
+		"list": {
+			"button": {
+				"new": ""
+			},
+			"header": {
+				"consumption": "",
+				"date": "",
+				"distance": "",
+				"volume": ""
+			}
+		}
+	},
+	"home": {
+		"button": {
+			"home": "",
+			"login": "",
+			"logout": ""
+		}
+	}
+}

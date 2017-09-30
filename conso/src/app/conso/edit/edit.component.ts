@@ -25,16 +25,22 @@ export class EditComponent implements OnInit {
     private service: PersistanceService) { }
 
   ngOnInit() {
+    // get the current counter value
     this.counterSubscription = this.service.counter.subscribe( 
       value => {
         this.counter = value;
       }
     );
+
+    // retrieves the requested database entry, if any
     this.paramSubscription = this.route
     .queryParams
     .subscribe(params => {
-        // Defaults to 0 if no query param provided.
         this.conso = this.service.getItem(params['date']);
+        // no entry found => defaults to today's date
+        if ( ! this.conso.date ) {
+          this.conso.date = new Date();
+        }
       });
       
   }

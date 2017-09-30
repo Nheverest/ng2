@@ -1,0 +1,14 @@
+{
+    "home.button.logout": "Déconnexion",
+    "home.button.login": "Connexion",
+    "home.button.home": "Accueil",
+    "home.select.option.fr_FR": "Français",
+    "home.select.option.en_GB": "Anglais",
+
+    "conso.list.button.new": "Ajouter", 
+    "conso.list.header.date": "Date",
+    "conso.list.header.distance": "Distance",
+    "conso.list.header.volume": "Volume",
+    "conso.list.header.consumption": "Consommation",
+    "conso.list.title": "Liste des consommations"
+}
