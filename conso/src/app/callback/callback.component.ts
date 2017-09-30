@@ -7,11 +7,11 @@ import { AuthService } from '../auth/auth.service';
 import * as auth0 from 'auth0-js';
 
 @Component({
-  selector: 'app-call-back',
-  templateUrl: './call-back.component.html',
-  styleUrls: ['./call-back.component.css']
+  selector: 'app-callback',
+  templateUrl: './callback.component.html',
+  styleUrls: ['./callback.component.css']
 })
-export class CallBackComponent implements OnInit {
+export class CallbackComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute, private auth: AuthService) { }
 
