@@ -3,7 +3,8 @@
 </h2>
 <form name="conso" #consoForm="ngForm">
   <input type="date" class="form-control" 
-    name="date" [(ngModel)]="conso.date"
+    name="date" [ngModel]="conso.date | date:'yyyy-MM-dd'"
+    (ngModelChange)="conso.date = $event"
   />
   <br/>
   <input type="distance" class="form-control"

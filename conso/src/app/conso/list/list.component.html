@@ -11,7 +11,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let conso of list" (click)="onEdit(conso.id)">
-      <td>{{ conso.date | date }}</td>
+      <td>{{ conso.date | date:'dd/MM/yyyy' }}</td>
       <td>{{ conso.distance }}</td>
       <td>{{ conso.volume }}</td>
       <td>{{ (conso.volume * 100) / conso.distance | number:'1.0-2' }}</td>
