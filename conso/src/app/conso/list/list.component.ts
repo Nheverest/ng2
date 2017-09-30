@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { DatePipe } from '@angular/common';
 
-import { PersistanceService } from '../_services/persistance.service';
+import { PersistanceService } from '../services/persistance.service';
 import { Consommation } from '../shared/consommation';
 
 
@@ -16,7 +16,10 @@ export class ListComponent implements OnInit {
 
   list: Consommation[];
 
-  constructor(private router: Router, private service: PersistanceService) { }
+  constructor(
+    private router: Router, 
+    private service: PersistanceService,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.list = this.service.loadData();
@@ -34,10 +37,13 @@ export class ListComponent implements OnInit {
   }
 
   onEdit(date: number) {
-    this.router.navigate(['/edit'], { queryParams: { date: date } });
+    this.router.navigate(
+      ['edit'], 
+      { queryParams: { date: date },
+        relativeTo: this.route.parent });
   }
 
   onAdd() {
-    this.router.navigate(['/edit']);
+    this.router.navigate(['edit'], { relativeTo: this.route.parent});
   }
 }

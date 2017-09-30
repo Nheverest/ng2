@@ -6,14 +6,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import {TranslateModule} from '@ngx-translate/core';
 
+import { ConsoModule } from './conso/conso.module';
 import { AuthService } from './auth/auth.service';
-import { PersistanceService } from './_services/persistance.service';
 
 import { AuthGuard } from './_guards/auth.guard';
 
 import { AppComponent } from './app.component';
-import { ListComponent } from './list/list.component';
-import { EditComponent } from './edit/edit.component';
 import { CallbackComponent } from './callback/callback.component';
 
 import { appRoutes } from './app.routes';
@@ -21,8 +19,6 @@ import { appRoutes } from './app.routes';
 @NgModule({
   declarations: [
     AppComponent, 
-    ListComponent,
-    EditComponent,
     CallbackComponent
   ],
   imports: [
@@ -32,9 +28,10 @@ import { appRoutes } from './app.routes';
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only
     ),
-    TranslateModule.forRoot()
+    TranslateModule.forRoot(),
+    ConsoModule
   ],
-  providers: [PersistanceService, AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 

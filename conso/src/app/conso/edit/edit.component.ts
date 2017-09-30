@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { Subscription } from 'rxjs/Subscription';
 
-import { PersistanceService } from '../_services/persistance.service';
+import { PersistanceService } from '../services/persistance.service';
 import { Consommation } from '../shared/consommation';
 
 @Component({
@@ -46,16 +46,16 @@ export class EditComponent implements OnInit {
   
     onSubmit() {
       this.service.persistItem(this.conso);
-      this.router.navigate(['/list']);
+      this.router.navigate(['list'], { relativeTo: this.route.parent });
     }
 
     onCancel() {
-      this.router.navigate(['/list']);
+      this.router.navigate(['list'], { relativeTo: this.route.parent });
     }
 
     onDelete() {
       this.service.deleteItem(this.conso);
-      this.router.navigate(['/list']);
+      this.router.navigate(['list'], { relativeTo: this.route.parent });
     }
 
     onAdd() {

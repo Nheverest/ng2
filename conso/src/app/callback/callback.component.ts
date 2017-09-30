@@ -16,7 +16,7 @@ export class CallbackComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private auth: AuthService) { }
 
   ngOnInit() {
-    this.auth.handleAuthentication('/edit');
+    this.auth.handleAuthentication('/conso/edit');
   }
 
 }

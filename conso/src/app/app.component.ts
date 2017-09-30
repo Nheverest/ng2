@@ -14,7 +14,7 @@ export class AppComponent {
   constructor(public auth: AuthService, private router:Router) {
   }
 
-  goHome():void {
-    this.router.navigate(['/list']);
+  goConso():void {
+    this.router.navigate(['conso']);
   }
 }
