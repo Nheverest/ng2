@@ -1,0 +1,8 @@
+<nav class="pull-left">
+    <nav>
+        <a routerLink="/home">Lagoon</a>
+    </nav>
+
+    <a *ngFor="let breadcrumb of breadcrumbs" [routerLink]="[breadcrumb.url]"> 
+        > {{ breadcrumb.label | translate }}</a>
+</nav>
