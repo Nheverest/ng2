@@ -1,7 +1,9 @@
 {
+    "home.welcome": "Bienvenue",
+    "home.button.conso": "Aller à l'application",
+    "home.button.home": "Go home",
     "home.button.logout": "Déconnexion",
     "home.button.login": "Connexion",
-    "home.button.home": "Accueil",
     "home.select.option.fr_FR": "Français",
     "home.select.option.en_GB": "Anglais",
 
@@ -16,5 +18,4 @@
     "conso.list.button.save": "Enregistrer",
     "conso.list.button.delete": "Supprimer",
     "conso.list.button.cancel" :"Annuler"
-
 }

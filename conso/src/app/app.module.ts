@@ -10,13 +10,14 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { ConsoModule } from './conso/conso.module';
 import { AuthService } from './auth/auth.service';
-
+import { FormObserverService } from './services/form-observer.service';
 import { AuthGuard } from './_guards/auth.guard';
 
 import { AppComponent } from './app.component';
 import { CallbackComponent } from './callback/callback.component';
 
 import { appRoutes } from './app.routes';
+import { HomeComponent } from './home/home.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -25,7 +26,7 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent, 
-    CallbackComponent
+    CallbackComponent, HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +45,7 @@ export function createTranslateLoader(http: HttpClient) {
   }),
     ConsoModule
   ],
-  providers: [AuthService, AuthGuard, HttpClient],
+  providers: [AuthService, AuthGuard, HttpClient, FormObserverService],
   bootstrap: [AppComponent]
 })
 

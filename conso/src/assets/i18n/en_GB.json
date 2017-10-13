@@ -1,7 +1,8 @@
 {
+    "home.welcome": "Welcome home!",
+    "home.button.home": "Go home",
     "home.button.logout": "Logout",
     "home.button.login": "Login",
-    "home.button.home": "Home",
     "home.select.option.fr_FR": "French",
     "home.select.option.en_GB": "English",
 
@@ -18,3 +19,4 @@
     "conso.list.button.cancel" :"Cancel"
 
 }
+
